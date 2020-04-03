@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,7 @@
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Irx-xB-c10" userLabel="City Name Search">
                                                 <rect key="frame" x="44" y="0.0" width="286" height="40"/>
+                                                <color key="tintColor" name="OwnColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tkt-fA-ZCX"/>
                                                 </constraints>
@@ -107,7 +108,6 @@
                                     <constraint firstItem="ZdA-PL-LEk" firstAttribute="leading" secondItem="kGQ-1k-aMH" secondAttribute="leading" id="0Kh-fb-2Nr"/>
                                     <constraint firstAttribute="trailing" secondItem="ZdA-PL-LEk" secondAttribute="trailing" id="9Hi-0v-z0g"/>
                                     <constraint firstItem="uDI-jg-xwb" firstAttribute="centerX" secondItem="kGQ-1k-aMH" secondAttribute="centerX" id="Csv-gE-Mgc"/>
-                                    <constraint firstItem="uDI-jg-xwb" firstAttribute="top" secondItem="ZdA-PL-LEk" secondAttribute="bottom" id="HD8-I5-2Zu"/>
                                     <constraint firstAttribute="trailing" secondItem="uDI-jg-xwb" secondAttribute="trailing" id="JFQ-3a-5LZ"/>
                                     <constraint firstItem="ZdA-PL-LEk" firstAttribute="centerX" secondItem="kGQ-1k-aMH" secondAttribute="centerX" id="prK-5t-ggT"/>
                                     <constraint firstItem="uDI-jg-xwb" firstAttribute="leading" secondItem="kGQ-1k-aMH" secondAttribute="leading" id="zND-GI-gtt"/>
