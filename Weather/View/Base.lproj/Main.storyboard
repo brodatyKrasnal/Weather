@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -35,16 +35,20 @@
                                                 <state key="normal" backgroundImage="location.circle.fill" catalog="system">
                                                     <color key="titleColor" name="OwnColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="locateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQU-q3-jWP"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Irx-xB-c10" userLabel="City Name Search">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Irx-xB-c10" userLabel="City Name Search">
                                                 <rect key="frame" x="44" y="0.0" width="286" height="40"/>
-                                                <color key="tintColor" name="OwnColor"/>
+                                                <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.5568627451" green="0.60392156860000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tkt-fA-ZCX"/>
                                                 </constraints>
                                                 <color key="textColor" name="OwnColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDV-aF-7q2" userLabel="Search Button">
                                                 <rect key="frame" x="334" y="1" width="40" height="37.666666666666671"/>
@@ -56,6 +60,9 @@
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system">
                                                     <color key="titleColor" name="OwnColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xc-eT-Imd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -127,6 +134,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="bV0-Rg-yRu" id="hMe-6c-O0m"/>
+                        <outlet property="searchCityField" destination="Irx-xB-c10" id="Zd3-3l-3Pt"/>
+                        <outlet property="temperatureLabel" destination="gl0-dk-0Oq" id="aNn-8a-Xs1"/>
+                        <outlet property="weatherConditionImage" destination="anr-0B-4z3" id="6tn-i1-Y7Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
